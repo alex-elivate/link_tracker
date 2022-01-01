@@ -31,6 +31,7 @@ services:
 ###< doctrine/doctrine-bundle ###
     volumes:
       - db-data:/var/lib/mysql
+
 volumes:
 ###> doctrine/doctrine-bundle ###
   db-data:
