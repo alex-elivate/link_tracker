@@ -14,7 +14,10 @@ class DashboardController extends AbstractDashboardController
     #[Route('/admin', name: 'admin')]
     public function index(): Response
     {
-        return parent::index();
+        // return parent::index();
+
+        return $this->render('bundles/EasyAdminBundle/layout.html.twig');
+
     }
 
     public function configureDashboard(): Dashboard
