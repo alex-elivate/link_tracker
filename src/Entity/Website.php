@@ -16,7 +16,7 @@ class Website
     #[ORM\Column(type: 'string', length: 255)]
     private $homepage_url;
 
-    #[ORM\ManyToOne(targetEntity: client::class, inversedBy: 'websites')]
+    #[ORM\ManyToOne(targetEntity: Client::class, inversedBy: 'websites')]
     #[ORM\JoinColumn(nullable: false)]
     private $client_id;
 
@@ -37,12 +37,12 @@ class Website
         return $this;
     }
 
-    public function getClientId(): ?client
+    public function getClientId(): ?Client
     {
         return $this->client_id;
     }
 
-    public function setClientId(?client $client_id): self
+    public function setClientId(?Client $client_id): self
     {
         $this->client_id = $client_id;
 
