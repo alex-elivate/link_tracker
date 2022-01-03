@@ -48,4 +48,10 @@ class Website
 
         return $this;
     }
+
+    public function __toString()
+    {
+        return $this->homepage_url;
+    }
+
 }
